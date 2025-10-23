@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./Sass/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>To Do List</title>
+</head>
+<body>
+    <main>
+        <section class="newItemEntry">
+            <form id="itemEntryForm">
+                <label for="newItem">Enter a new to do item:</label>
+                <!--Clicking the label moves focus to (or toggles) the associated control — useful for checkboxes/radios and for easier clicking on small controls.-->
+                <input id="newItem" type="text" size="40" autocomplete="off" placeholder="Add item" tabindex="0" />
+                <!--当用户按下键盘的 Tab 键 时，页面上可聚焦（focus）的元素会按照 tabindex 的顺序被选中-->
+                <button id="addItem" class="button" title="Add new item" aria-label="Add new item to list" tabindex="0">+</button>
+                <!--The title attribute provides advisory information about the element. Browsers typically show this text as a tooltip when the user hovers the mouse over the element.-->
+            </form>
+        </section>
+        <section class="listContainer">
+            <div class="listTitle">
+                <h1 tabindex="0">To Do List</h1>
+                <button id="clearItems" class="button" title="Clear the list" aria-label="Remove all items from the list" tabindex="0">Clear</button>
+            </div>
+            <hr>
+            <div id="listItems">
+                <!--
+                <div class="item">
+                    <input type="checkbox" id="1" tabindex="0">
+                    <label for="1">eat</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="2" tabindex="0">
+                    <label for="2">sleep</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="3" tabindex="0">
+                    <label for="3">code</label>
+                </div> 
+                -->
+            </div>
+        </section>
+    </main>
+<script src="./js/main.js" type="module"></script>
+</body>
+</html>
